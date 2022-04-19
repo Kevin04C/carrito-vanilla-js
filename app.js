@@ -79,6 +79,8 @@ const pintarCarrito = () => {
     });
     items.appendChild(fragment);
     pintarFooter();
+    
+    localStorage.setItem("carrito",JSON.stringify(carrito));  
 }
 const pintarFooter  = () => {
     footer.innerHTML = "";
@@ -114,7 +116,6 @@ const action = (id,action) => {
     }
     pintarCarrito();
     
-    localStorage.setItem("carrito",JSON.stringify(carrito));  
 }
 
 
